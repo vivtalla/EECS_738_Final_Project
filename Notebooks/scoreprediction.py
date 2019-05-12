@@ -15,7 +15,7 @@ for team in teams:
     dataset = pd.concat([dataset, team.schedule.dataframe_extended])
     # if n > 1:
     #     break
-    # n += 1
+    n += 1
     print("Team", n, "Done")
 dataset.to_csv('data-full.csv', encoding='utf-8', index=False)
 
