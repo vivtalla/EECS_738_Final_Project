@@ -12,22 +12,27 @@ To run the python code, simply download the zip file of this project. The notebo
 
 ### Models
 
-End with an example of getting some data out of the system or using it for a little demo
+The models we used for this included the following:
+- Simple, back propagating neural network from scratch: A Neural Net written from scratch that has three layers, input, hidden, and output. Utilized for predicting game outcome.
+- Neural Network using Keras: Keras is used here to create a neural network that predicts game outcome. It plays around with different numbers of input layers and hidden layers to see where the best outcome lies.
+- Random Forest Regressor: Utilizing the SciKit Learn Python libraries to predict game outcome.
+- Markov Model: This model is attempting to predict the seed of the 68 teams that are admitted to the NCAA basketball tournament. To do this, the model needs a transition matrix that rates each team as 'probability of being better' and 'probability of being worse' than each other team in the NCAA. These probabilities are obtained through logistic regression. Once the transition matrix is obtained, the probabilities can be used to seed the bracket. The quality of the bracket is determined by how well the seeds predicted to win do throughout the tournament compared to what actually happened.
+
+Both the neural networks tested with different combinations of input data to find the best features. A lot of feature selection was also done in order to identify which (from the 72 that were given) were actually useful in predicting game outcomes.  
 
 ## Data
 
-Explain how to run the automated tests for this system
+The data for this project comes from Kaggle and Sports Reference. It includes game data for every NCAA basketball team for every game for however many seasons you'd like. We worked with the most recent 2018-2019 season.
 
 ### Results
 
-Explain what these tests test and why
+Results can be shown in the 'Bracket' file for the outcome of game prediction, and in the various notebooks for each of the neural nets.
 
 ## References
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Sports Reference](https://www.sports-reference.com/) - Used for Game Data
+* [Kaggle](https://www.kaggle.com/) - Used for Seeding Data
 
 ## Libraries Used
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+* [Scikit Learn](https://scikit-learn.org/stable/) - Random Forest Regressor
